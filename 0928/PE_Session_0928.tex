@@ -1,0 +1,235 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt, xcolor=dvipsnames]{beamer}
+\definecolor{slight}{gray}{0.9}
+\fboxsep=10pt
+\usecolortheme[named=Royal Blue]{structure}
+\useinnertheme{circles}
+\usepackage[no-math]{fontspec}
+\usepackage{xltxtra, xunicode}
+\usepackage[utf8]{inputenc}
+\usepackage[sc, osf]{mathpazo}
+\setmainfont[Mapping=tex-text]{Minion Web Pro}
+\setsansfont[Mapping=tex-text]{Myriad Web Pro}
+\setmonofont[Scale=MatchLowercase]{Source Code Pro}
+\usefonttheme{professionalfonts}
+%% 中文字配置
+\usepackage[
+CJKmath=true, indentfirst=false, PunctStyle={quanjiao},
+CheckSingle=true, SlantFont, BoldFont
+]{xeCJK}
+\setCJKmainfont[Scale=0.9, BoldFont=Hiragino Mincho ProN W6]{Hiragino Mincho ProN W3}
+\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans W6]{Hiragino Sans W4}
+%\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans CNS W6]{Hiragino Sans CNS W3}
+%\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans W7]{Hiragino Sans W4}
+%\setCJKsansfont[Scale=0.9, BoldFont=Source Han Sans UI TC Bold]{Source Han Sans UI TC Regular}
+%\setCJKsansfont[Scale=0.9, BoldFont=PingFang TC Semibold]{PingFang TC Regular}
+\setCJKmonofont[Scale=0.9, BoldFont=Yuanti TC Regular]{Hiragino Maru Gothic ProN W4}
+\usepackage{fancyvrb, attachfile2, pstricks}
+\usepackage{graphicx}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamertemplate{footline}[frame number]
+\usepackage{xmpmulti, booktabs, multicol}
+\setbeamertemplate{navigation symbols}{}
+\let\WriteBookmarks\relax
+\usepackage{dcolumn}
+\newcolumntype{.}[1]{D{.}{.}{#1}}
+\newcolumntype{,}[1]{D{,}{,}{#1}}
+
+\linespread{1.25}
+
+\setbeamersize{text margin left=.8em, text margin right=.6em}
+
+\makeatletter
+\defbeamertemplate{itemize item}{mycircle}{\LARGE\raise-1.6pt\hbox{\textbullet}}
+\makeatother
+
+\setbeamertemplate{itemize item}[mycircle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setlength\leftmargini{1.3em}
+\setlength\leftmarginii{1em}
+
+
+%\CTXFR
+\title{\bf{\Huge {}\\[-2mm] Principles of Economics \\[2mm] Review Session}}
+\author{{\Large 張耕齊\\[2mm] Keng-Chi Chang}}
+\institute{{}\\[-7mm]\footnotesize\tt{<r03323070@ntu.edu.tw>}\\[2mm]}
+\date{\large 2016.09.28}
+\begin{document}
+\fontsize{12}{14pt}\selectfont
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Housekeeping Issues}
+\begin{itemize}
+\item Course Website for all the slides \& homeworks
+\item Homework due on Monday at noon, via Ceiba
+\item FB group for common questions, discussions \&  study groups 
+\item Check your NTU email regularly
+\item Links
+\begin{itemize}
+\item Course Website {\footnotesize \tt <goo.gl/YLCoKJ>}
+\item Ceiba {\footnotesize \tt <goo.gl/WSWtsh>}
+\item FB group {\footnotesize \tt <goo.gl/JmGJIx>} 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Review Sessions \& Office Hours}
+\begin{itemize}
+\item Review Sessions
+\begin{itemize}
+\item Monday 12:20-13:10 at Management 2nd Building 101 in English
+\item Wednesday 12:20-13:10 at Social Science Building 201 in Chinese
+\end{itemize}
+\item Go to Monday's first since you'll have to take tests in English 
+\item Office Hours
+\begin{itemize}
+\item Joseph: Friday 12:10-13:10 after class or by email appointment
+\item Wang: Tuesday 15:30-17:30 at Social Science Building 649
+\item Chang: Thursday 14:20-15:10 at Social Science Building 650
+\end{itemize}
+\item Don't just come for answers, show your work
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Personal Recommended Readings}
+\begin{itemize}
+\item {\it Capitalism and Freedom} by Milton Friedman \hfill《資本主義與自由》
+\item {\it Fair Play} by Steven Landsburg \hfill《公平賽局》
+\item {\it The Worldly Philosophers} by Robert Heilbroner \hfill《俗世哲學家》
+\item {\it Why Nations Fail} by Acemoglu \& Robinson \hfill《國家為什麼會失敗》
+\item {\it Poor Economics} by Banerjee \& Duflo \hfill《窮人的經濟學》
+\item The Economist \hfill {\footnotesize\tt{<economist.com>}}
+\item The Upshot \hfill {\footnotesize\tt{<nytimes.com/upshot>}}
+\item 意識型態咖啡 \hfill {\footnotesize\tt{<blog.roodo.com/lakatos>}}
+\item 白經濟 \hfill {\footnotesize\tt{<talkecon.com>}}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf What to Do in Review Sessions?}
+\begin{itemize}
+\item Review important concepts
+\item Go through some homeworks
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf Chapter 1 in a Nutshell}
+\begin{itemize}
+\item Positive \& normative statements 實然 vs. 應然
+\begin{itemize}
+	\item ``Economics should study positive statements'' is a normative statement
+\end{itemize}
+\item Optimization: People make choices {\it given information}
+\begin{itemize}
+	\item Sunny on typhoon breaks
+\end{itemize}
+\item Opportunity cost: The thing you gave up
+\item Cost-benefit analysis: Try to make things comparable
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Positive \& Normative Statements}
+\noindent \small \textsf{\bfseries Midterm 2008 Multiple Choice Q2.}
+Which of the following is {\it not} a positive statement?
+\begin{enumerate}\itemsep-0.5ex
+\item[A.] Higher gasoline prices will reduce gasoline consumption.
+\item[B.] Equity is more important than efficiency.
+\item[C.] Trade restrictions lower our standard of living.
+\item[D.] If a nation wants to avoid inflation, it will restrict the growth rate of the quantity of money. 
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Optimization}
+\small 
+\noindent \textsf{\bfseries ALL 1-5.}
+There is an old saying that ``The proof of the pudding is in the eating,'' which means that by definition good decisions work out well and poor decisions work out badly. The following scenarios ask you to consider the wisdom of this saying.
+\begin{enumerate}
+\item[a.] Your friends live in a city where it often rains in May. Nonetheless, they plan a May outdoor wedding and have no backup plan if it does rain. The weather turns out to be lovely on their wedding day. Do you think your friends were being rational when they made their wedding plans? Explain. 
+\item[b.] You usually have to see a doctor several times each year. You decided to buy health insurance at the start of last year. It turns out you were never sick last year and never had to go the doctor. Do you think you were being rational when you decided to buy health insurance? 
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Optimization}
+\small 
+\noindent {\bfseries ALL 1-8.}
+This chapter discussed the free-rider problem. Consider the following two situations in relation to the free-rider concept.
+\begin{enumerate}
+\item[a.] The Taft-Hartley Act (1947) allows workers to be employed at a firm without joining the union at their workplace or paying membership fees to the union. This arrangement is known as an open shop. Considering that unions negotiate terms of employment and wages on behalf of all the workers at a firm, why do you think that most unions are opposed to open shops? 
+\item[b.] For your business communication class, you are supposed to work on a group assignment in a team of six. You soon realize that a few of your team members do not contribute to the assignment but get the same grade as the rest of the team. If you were the professor, how would you redesign the incentive structure here to fix this problem? 
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Opportunity Cost}
+\small 
+\noindent {\bfseries Midterm 2009 Multiple Choice Q4.}
+Mike and Sandy are two woodworkers who both make tables and chairs. In one month, Mike can make 4 tables or 20 chairs, where Sandy can make 6 tables or 18 chairs. Given this, we know that the opportunity cost of 1 table is
+\begin{enumerate}\itemsep-0.5ex
+\item[A.] 1/5 chair for Mike and 1/3 chair for Sandy. 
+\item[B.] 1/5 chair for Mike and 3 chairs for Sandy.
+\item[C.] 5 chairs for Mike and 1/3 chair for Sandy.
+\item[D.] 5 chairs for Mike and 3 chairs for Sandy. 
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Cost-Benefit Analysis}
+\small 
+{\bfseries Midterm 2008 Multiple Choice Q14.}
+Suppose that the cost of installing an overhead pedestrian walkway in a college town is \$100,000. The walkway is expected to reduce the risk of fatality by 0.5 percent, and the cost of a human life is estimated at \$10 million. The town should
+\begin{enumerate}\itemsep-0.5ex
+\item[A.] Install the walkway because the estimated benefit is twice the cost.
+\item[B.] Install the walkway because the estimated benefit equals the cost.
+\item[C.] Not install the walkway, since the cost is twice the estimated benefit.
+\item[D.] Install the walkway, since the cost of even a single life is too great not to take action. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf Chapter 2 in a Nutshell}
+\begin{itemize}
+\item Correlation is not causation
+\item Making predictions vs. knowing the truth
+\item Usually random and large sample would help
+\item The key is to find good comparisons 懶叫比雞腿
+\begin{itemize}
+\item Economists develop many methods to pursue causality
+\item More on this in sophomore's Statistics \& Econometrics
+\end{itemize}
+\item If you are interested
+\begin{itemize}
+\item {\it The Signal and the Noise} by Nate Silver《精準預測》
+\item {\it Mastering 'Metrics} by Joshua Angrist \& Jörn-Steffen Pischke
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Finding Good Comparisons}
+\small \textsf{\bfseries ALL 2-6.} The chapter shows that as a general rule people with more education earn higher salaries. Economists have offered two explanations of this relationship. The human capital argument says that high schools and colleges teach people valuable skills and employers are willing to pay higher salaries to attract people with those skills. The signaling argument says that college graduates earn more because a college degree is a signal to employers that a job applicant is diligent, intelligent, and persevering. How might you use data on people with two, three, and four years of college education to shed light on this controversy?
+\end{frame}
+
+
+\end{document}
