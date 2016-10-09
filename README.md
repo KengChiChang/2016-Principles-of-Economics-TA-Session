@@ -4,10 +4,10 @@ Fall 2016 @ National Taiwan University
 
 
 ## Course Information
-- Instructor: [Professor Joseph Tao-yi Wang](http://homepage.ntu.edu.tw/~josephw)
-- TA: [Keng-Chi Chang](http://kengchichang.github.io), Chi-Ying Wang, Chung-Yen Chen
-- Textbook: Acemoglu, Laibson and List. 2015. [*Economics*](https://www.amazon.com/Economics-Daron-Acemoglu/dp/0321391586). Pearson.
-- Links:
+- **Instructor**: [Professor Joseph Tao-yi Wang](http://homepage.ntu.edu.tw/~josephw)
+- **TA**: [Keng-Chi Chang](http://kengchichang.github.io), Chi-Ying Wang, Chung-Yen Chen
+- **Textbook**: Acemoglu, Laibson and List. 2015. [*Economics*](https://www.amazon.com/Economics-Daron-Acemoglu/dp/0321391586). Pearson.
+- **Links**:
   - [Course Website](http://homepage.ntu.edu.tw/~josephw/principles_micro_16F.htm)
   - [FB Group](https://www.facebook.com/groups/1100981933320734/)
   - [NTU Ceiba](https://ceiba.ntu.edu.tw/course/19783d/index.htm)
