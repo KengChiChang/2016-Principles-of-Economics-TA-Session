@@ -1,4 +1,6 @@
-# Principles of Economics TA Session, Fall 2016 @ National Taiwan University
+# Principles of Economics TA Session
+
+Fall 2016 @ National Taiwan University
 
 ## Course Information
 - Instructor: [Professor Joseph Tao-yi Wang](http://homepage.ntu.edu.tw/~josephw)
