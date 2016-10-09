@@ -3,7 +3,7 @@
 ## Course Information
 - Instructor: [Professor Joseph Tao-yi Wang](http://homepage.ntu.edu.tw/~josephw)
 - TA: Chi-Ying Wang, [Keng-Chi Chang](http://kengchichang.github.io)
-- Textbook: [Acemoglu, Laibson and List. 2015. *Economics*. Pearson.](https://www.amazon.com/Economics-Daron-Acemoglu/dp/0321391586)
+- Textbook: Acemoglu, Laibson and List. 2015. [*Economics*](https://www.amazon.com/Economics-Daron-Acemoglu/dp/0321391586). Pearson.
 - Links:
   - [Course Website](http://homepage.ntu.edu.tw/~josephw/principles_micro_16F.htm)
   - [FB Group](https://www.facebook.com/groups/1100981933320734/)
