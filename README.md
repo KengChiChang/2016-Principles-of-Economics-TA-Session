@@ -16,5 +16,5 @@
 
 
 ## Beamer Template
-- [beamer-template.tex](template/beamer-template.tex)
+- [beamer-template.tex](template/beamer-template.tex):
 I use xeLaTeX, Myriad Web Pro & Hiragino Sans for sans-serif fonts (default), Minion Web Pro & Hiragino Mincho ProN for serif fonts, and MinionPro for math fonts.
