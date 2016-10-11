@@ -1,0 +1,242 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt, xcolor=dvipsnames]{beamer}
+\definecolor{slight}{gray}{0.9}
+\fboxsep=10pt
+\usecolortheme[named=Royal Blue]{structure}
+\useinnertheme{circles}
+\usepackage[no-math]{fontspec}
+\usepackage{xltxtra, xunicode}
+\usepackage[utf8]{inputenc}
+%\usepackage[sc, osf]{mathpazo}
+\usepackage[minionint, lf, mathtabular]{MinionPro}
+\setmainfont[Mapping=tex-text]{Minion Web Pro}
+\setsansfont[Mapping=tex-text]{Myriad Web Pro}
+\setmonofont[Scale=MatchLowercase]{Source Code Pro}
+\usefonttheme{professionalfonts}
+%% 中文字配置
+\usepackage[
+CJKmath=true, indentfirst=false, PunctStyle={quanjiao},
+CheckSingle=true, SlantFont, BoldFont
+]{xeCJK}
+\setCJKmainfont[Scale=0.9, BoldFont=Hiragino Mincho ProN W6]{Hiragino Mincho ProN W3}
+%\setCJKmainfont[Scale=0.9, BoldFont=Noto Sans CJK JP Bold]{Noto Sans CJK JP Medium}
+\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans W6]{Hiragino Sans W4}
+%\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans CNS W6]{Hiragino Sans CNS W3}
+%\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans W7]{Hiragino Sans W4}
+%\setCJKsansfont[Scale=0.9, BoldFont=Source Han Sans UI TC Bold]{Source Han Sans UI TC Regular}
+%\setCJKsansfont[Scale=0.9, BoldFont=PingFang TC Semibold]{PingFang TC Regular}
+\setCJKmonofont[Scale=0.9, BoldFont=Yuanti TC Regular]{Hiragino Maru Gothic ProN W4}
+\usepackage{fancyvrb, attachfile2, pstricks}
+\usepackage{graphicx}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamertemplate{footline}[frame number]
+\usepackage{xmpmulti, booktabs, multicol}
+\setbeamertemplate{navigation symbols}{}
+\let\WriteBookmarks\relax
+\usepackage{dcolumn}
+\newcolumntype{.}[1]{D{.}{.}{#1}}
+\newcolumntype{,}[1]{D{,}{,}{#1}}
+
+\linespread{1.25}
+
+\setbeamersize{text margin left=.8em, text margin right=.6em}
+
+\makeatletter
+\defbeamertemplate{itemize item}{mycircle}{\LARGE\raise-1.6pt\hbox{\textbullet}}
+\makeatother
+
+\setbeamertemplate{itemize item}[mycircle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setlength\leftmargini{1.3em}
+\setlength\leftmarginii{1em}
+
+
+%\CTXFR
+\title{\bf{\Huge {}\\[-2mm] Principles of Economics \\[2mm] Review Session}}
+\author{{\Large 張耕齊\\[2mm] Keng-Chi Chang}}
+\institute{{}\\[-7mm]\footnotesize\tt{<r03323070@ntu.edu.tw>}\\[2mm]}
+\date{\large 2016.10.12}
+\begin{document}
+\fontsize{12}{14pt}\selectfont
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf §5.1--5.2 How Consumers Make Choices}
+\begin{itemize}
+	\item Consumer faces two conditions: subjective and objective \pause
+	\item Subjective condition: How do you like these things?
+	\begin{itemize}
+		\item What is the additional benefit you can get, if you buy one more $X$? How about buying one more $Y$?
+		\item We call them marginal benefits, denoted by $MB_X$ and $MB_Y$
+		\item This is related to {\it indifference curve}, you'll learn in the future \pause
+	\end{itemize}
+	\item Objective condition: You are not able to get whatever you like
+	\begin{itemize}
+		\item There are always opportunity costs and limited resources
+		\item That is, what are the prices and your income?
+		\item This is depicted by your budget constraint $P_X\cdot Q_X+P_Y\cdot Q_Y \leq I$
+	\end{itemize}
+	\item Consumer chooses the number of goods $Q_X$, $Q_Y$ to buy
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item When both conditions meet, we should expect two things
+	\begin{itemize}
+		\item[1.] Your choice makes marginal benefits per dollar the same
+		\[{MB_X\over P_X}={MB_Y\over P_Y} \;\;\;\;\mbox{or, equivalently,}\;\;\;\; {MB_X\over MB_Y}={P_X\over P_Y}\] \\[-5mm]
+		\item[2.] You spend all your money: $P_X\cdot Q_X+P_Y\cdot Q_Y = I$ \pause
+	\end{itemize}
+	\item Why?
+	\begin{itemize}
+		\item[1.] If $>$ happens, you should buy more $X$; if $<$ happens, you should buy more $Y$; not a best choice in either case
+		\item[1'.] (Alternative explanation) Exchange ratio between $X$ and $Y$ is the same subjectively ($MB_X/MB_Y$) and objectively ($P_X/P_Y$)
+		\item[2.] We (implicitly) assumed leaving money has no benefit
+	\end{itemize}
+	\item Again, the power of marginal analysis
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf §5.3 From Choice to Demand}
+\begin{itemize}
+	\item Price of $X$ changes from $P_X$ to $P'_X$ $\Rightarrow$ make different choice $\Rightarrow$ quantity demanded changes from $Q_X$ to $Q'_X$
+	\item Plot these different combinations of prices and quantity demanded $(P_X,Q_X)$, $(P'_X,Q'_X)$, $(P''_X,Q''_X)$, ... etc on the price-quantity plane yields the consumer's demand curve
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf §5.4 Consumer's Surplus}
+\begin{itemize}
+	\item Consumer's surplus 消費者剩餘 is the sum of differences between the demand curve and the market price
+	\item Why? Since the demand curve depicts your willingness to pay, if it is higher than the real price, it is as if you earn something
+	\item Recall experiment 3, if you get a black K, you're happy
+	\item Why bother? A measure of efficiency
+	\item More on this in Chapter 7 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\bf §5.5 Elasticity of Demand}
+\begin{itemize}
+	\item Price elasticity of demand measures how sensitive a price change may lead to a quantity demanded change
+	\[\varepsilon_D={\%(\Delta Q)\over \%(\Delta P)}=-{\Delta Q/Q\over \Delta P/P}=-{\Delta Q\over \Delta P}\cdot{P\over Q}=-{Q_2-Q_1 \over P_2-P_1}\cdot{P\over Q}\]\\[-5mm] \pause
+	\item It depends on not only the slope but also the location \pause
+	\item Arc elasticity 弧彈性: Take $(P,Q)=(P_1,Q_1)$, or $(P_2,Q_2)$, or $({P_1+P_2 \over 2},{Q_1+Q_2 \over 2})$, midpoint is better but the key is to be consistent \pause
+	\item Point elasticity 點彈性: As $(P_1,Q_1) \rightarrow (P_2,Q_2)$, $\varepsilon_D\rightarrow-{\mathrm{d}Q \over \mathrm{d}P}\cdot{P\over Q}$ \pause
+	\item Inelastic demands more vertical, elastic ones more horizontal \pause
+	\item Why not just use slopes? We want unit-free and comparable
+	\item Consider $\Delta P=1$ in rice and cars
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{itemize}
+	\item Why should we care about elasticity of demand? 
+	\begin{itemize}
+		\item Just to name a few:
+		\item What's the effect of a price hike? (see past midterm essays)
+		\item The effect on total revenue (graph, or observe $TR=P\cdot Q$)
+		\item The effect on tax incidence (graph, or see Chapter 10) \pause
+	\end{itemize}
+	\item An interesting case: illegal drugs, which has inelastic demand
+	\begin{itemize}
+		\item Interdiction reduces supply but makes vendors richer
+		\item Education reduces demand and vendors get poorer
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{itemize}
+	\item In general, when will elasticity of demand be larger?
+	\begin{itemize}
+		\item More close substitutes (you can always switch)
+		\item Larger budget share (more room to adjust, e.g. meat vs. salt)
+		\item More time to adjust (you can always try to find a substitute)
+		\item More like luxuries rather than necessities (Mankiw textbook)
+	\end{itemize}
+	\item Cross-price elasticity of demand: Replace $P$ with $P_Y$
+	\item Income elasticity of demand: Replace $P$ with $I$
+	\item $\square$ elasticity of demand is 
+	\[{\%(\Delta Q)\over \%(\Delta\,\square)}\]
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\bf Budget Sets}
+\small \textsf{\bfseries ALL 5-4.} 
+Akio consumes two goods, books and sweaters. His income is \$24, the price of a sweater is \$4, and the price of a book is \$2.
+\begin{enumerate}\itemsep-0.5ex
+\item[a.] Suppose Akio’s parents give him \$8 for his birthday. Draw Akio’s budget set.
+\item[b.] Now suppose Akio’s parents had given him two sweaters for his birthday instead of giving him \$8. Akio is a very polite young man and would never return a gift that his parents had given him. Draw Akio’s budget set.
+\item[c.] Based on your answers to parts a. and b., is it possible that Akio would prefer a gift of \$8 to a gift of two sweaters? He would prefer a gift of two sweaters to a gift of \$8? He would be indifferent between a gift of \$8 and a gift of two sweaters?
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\bf Consumer's Choice}
+\small \textsf{\bfseries ALL 5-7.} 
+You have decided to spend \$40 this month on CDs and movies. The total benefits you receive from different quantities of CDs and movies are shown in the table below. The price of a CD is \$10 and the price of a movie is \$10.
+\begin{enumerate}\itemsep-0.5ex
+\item[a.] Complete columns B, C, E, and F in the table above.
+\item[b.] What combination of movies optimizes your total benefit? Explain your reasoning.
+\item[c.] Suppose the local movie theater decides to offer a student discount and as a result the price of a movie falls to \$5. If the price of CDs remains \$10 and you continue to spend \$40 on CDs and movies, now what combination of movies optimizes your total benefit? Explain your reasoning.
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{\bf Elasticities of Demand}
+\small \textsf{\bfseries ALL 5-13.} 
+Nadia consumes two goods, food and clothing. The price of food is \$2, the price of clothing is \$5, and her income is \$1,000. Nadia always spends 40 percent of her income on food regardless of the price of food, the price of clothing, or her income.
+\begin{enumerate}\itemsep-0.5ex
+\item[a.] What is her price elasticity of demand for food?
+\item[b.] What is her cross-price elasticity of demand for food with respect to the price of clothing?
+\item[c.] What is her income elasticity of demand for food?
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{\bf Elasticity of Electricity}
+\small \textsf{\bfseries Midterm 2008 Essay Part D.} \\
+Read the article and answer the following questions:
+\begin{enumerate}\itemsep-0.5ex
+\item[1.] Assume Taipower’s revenue and loss estimates mentioned above is for the whole year, and infer the total amount of electricity (多少度) used by all Taiwanese. (Assume Taipower thinks that the quantity demanded is the same before and after the price hike.)
+\item[2.] What is the (average) price elasticity of electricity for military families? (You may use the midpoint method in your calculations.)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}\itemsep-0.5ex
+\small
+\item[3.] Suppose the price elasticity of electricity for normal households is the same as military families. If Taipower increases electricity price by the proposed NT\$0.64, how much electricity could be conserved? \\
+(Note that you are making a different assumption than Taipower in question 1!)
+\item[4.] Assuming this elasticity is fixed for all quantities, if the ministry of economics agrees to eliminate the price discount for military family according to the proposed three year plan, how much electricity (per family and total) would be conserved in each year?
+\item[5.] What are the possible reasons for these estimates to be inaccurate?
+\item[6.] Suppose we are worried about the well-being of the poor who cannot afford high utility costs. What kind of discount scheme would you propose taking the above facts into account? 
+\end{enumerate}
+\end{frame}
+
+
+
+\end{document}
