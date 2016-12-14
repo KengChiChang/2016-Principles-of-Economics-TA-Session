@@ -22,6 +22,7 @@ Fall 2016 @ National Taiwan University
 - [2016-11-23: Chapter 11](1123/PE_Session_1123.pdf)
 - [2016-11-30: Chapter 12](1130/PE_Session_1130.pdf)
 - [2016-12-07: Chapter 12](1207/PE_Session_1207.pdf)
+- [2016-12-14: Chapter 13](1214/PE_Session_1214.pdf)
 
 
 ## Beamer Template
