@@ -1,0 +1,303 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt, xcolor=dvipsnames]{beamer}
+\definecolor{slight}{gray}{0.9}
+\fboxsep=10pt
+\usecolortheme[named=Royal Blue]{structure}
+\useinnertheme{circles}
+\usepackage[no-math]{fontspec}
+\usepackage{xltxtra, xunicode}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+%\usepackage[sc, osf]{mathpazo}
+\usepackage[minionint, lf, mathtabular]{MinionPro}
+\setmainfont[Mapping=tex-text]{Minion Web Pro}
+\setsansfont[Mapping=tex-text]{Myriad Web Pro}
+\setmonofont[Scale=MatchLowercase]{Source Code Pro}
+\usefonttheme{professionalfonts}
+%% 中文字配置
+\usepackage[
+CJKmath=true, indentfirst=false, PunctStyle={quanjiao},
+CheckSingle=true, SlantFont, BoldFont
+]{xeCJK}
+\setCJKmainfont[Scale=0.9, BoldFont=Hiragino Mincho ProN W6]{Hiragino Mincho ProN W3}
+%\setCJKmainfont[Scale=0.9, BoldFont=Noto Sans CJK JP Bold]{Noto Sans CJK JP Medium}
+\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans W6]{Hiragino Sans W4}
+%\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans CNS W6]{Hiragino Sans CNS W3}
+%\setCJKsansfont[Scale=0.9, BoldFont=Hiragino Sans W7]{Hiragino Sans W4}
+%\setCJKsansfont[Scale=0.9, BoldFont=Source Han Sans UI TC Bold]{Source Han Sans UI TC Regular}
+%\setCJKsansfont[Scale=0.9, BoldFont=PingFang TC Semibold]{PingFang TC Regular}
+\setCJKmonofont[Scale=0.9, BoldFont=Yuanti TC Regular]{Hiragino Maru Gothic ProN W4}
+\usepackage{fancyvrb, attachfile2, pstricks}
+\usepackage{graphicx}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamertemplate{footline}[frame number]
+\usepackage{xmpmulti, booktabs, multicol}
+\setbeamertemplate{navigation symbols}{}
+\let\WriteBookmarks\relax
+\usepackage{dcolumn}
+\newcolumntype{.}[1]{D{.}{.}{#1}}
+\newcolumntype{,}[1]{D{,}{,}{#1}}
+
+\linespread{1.25}
+
+\setbeamersize{text margin left=.8em, text margin right=.6em}
+
+\makeatletter
+\defbeamertemplate{itemize item}{mycircle}{\LARGE\raise-1.6pt\hbox{\textbullet}}
+\makeatother
+
+\setbeamertemplate{itemize item}[mycircle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setlength\leftmargini{1.3em}
+\setlength\leftmarginii{1em}
+
+
+%\CTXFR
+\title{\bf{\Huge {}\\[-2mm] Principles of Economics \\[2mm] Review Session}}
+\author{{\Large 張耕齊\\[2mm] Keng-Chi Chang}}
+\institute{{}\\[-7mm]\footnotesize\tt{<r03323070@ntu.edu.tw>}\\[2mm]}
+\date{\large 2016.12.14}
+\begin{document}
+\fontsize{12}{14pt}\selectfont
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{\bf §13.1--13.3 Normal Form Games}
+\begin{itemize}
+\item Game: Players, strategies, and payoffs
+\item First look at games in which players move simultaneously
+\item Best response: Suppose others' actions and choose your best strategy under this scenario. This depends on others' actions
+\item Dominant strategy: A best strategy that holds for all kinds of others' actions. So it's a best response to every others' actions
+\item Nash Equilibrium: A strategy combination for which every players are under mutual best response. So no incentive for unilateral deviation
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf Prisoners' Dilemma \& Dominant Strategy}
+\begin{center}
+\large
+\begin{tabular}{c|cc}
+&Defect&Coop.\\
+\hline
+Defect&-5,\;-5&-1,\;-10\\
+Coop.&-10,\;-1&-2,\;-2
+\end{tabular} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf Nash Equilibrium}
+\begin{center}
+\large
+\begin{tabular}{c|cc}
+&L&R\\
+\hline
+U&2,\;4&6,\;3\\
+M&3,\;3&3,\;4\\
+D&5,\;4&4,\;3
+\end{tabular} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Battle of Sexes \& Multiple Nash Equilibria}
+\begin{center}
+\large
+\begin{tabular}{c|cc}
+&Ballet&Football\\
+\hline
+Ballet&2,\;1&0,\;0\\
+Football&0,\;0&1,\;2
+\end{tabular} 
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\small \textsf{\bfseries Bonus Question (ALL 13-3).} In the movie Princess Bride, the hero disguised as the pirate Westley is engaged in a game of wits with the villain Vizzini. 
+\begin{enumerate}\itemsep-0.5ex 
+\item Westley puts poison in either his own glass of wine or in Vizzini's glass.
+\item Vizzini will choose to drink from his own glass or from Westley's; Westley drinks from the glass Vizzini does not choose.
+\end{enumerate}
+(You should think of this as a game where players move simultaneously since Vizzini does not see which glass Wetley has chosen). Assume drinking the poison and dying gives a payoff of -10; staying alive has a payoff of 10.
+\end{frame}
+
+
+\begin{frame}
+\small
+\begin{enumerate}\itemsep-0.5ex 
+\item[1.] Construct the payoff matrix for this game. 
+\item[2.] Does Vizzini have a dominant strategy? Does Westley have a dominant strategy? 
+\item[3.] Does this game have a Nash equilibrium where players use pure strategies?
+\item[4.] Now suppose that Westley has another strategy which is not to put poison in any of the glasses, and this will give him a utility of a regardless of Vizzini's choice. For what values of a does Westley have a dominant strategy?
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf §13.5 Extensive-Form Games}
+\begin{itemize}
+\item Some games have sequential move structure
+\item First-mover's best response depends on second-mover's actions, ... and so on
+\item Since every player knows other's payoffs and others are rational, we know exactly what the last-mover will do
+\item Backward induction: Easier to solve the problem backwards, from the last-mover's decision
+\item This help us to find the Subgame Perfect Nash Equilibrium
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Backward Induction \& SPNE}
+\begin{center}
+\begin{tikzpicture}[semithick]
+\tikzstyle{solid node}=[circle,draw,inner sep=1.2,fill=black];
+\draw (-4,0) -- (4,1.5) node[right]{(2,\;5)};
+\draw (-4,0) -- (0,-0.5) -- (4,0) node[right]{(0,\;-5)};
+\draw (-4,0) -- (0,-0.5) -- (4,-1) node[right]{(4,\;2)};
+\draw (0,0.8) node [above] {Drop};
+\draw (-2,-1) node [above] {Don't Drop};
+\draw (2,-0.2) node [above] {Bar};
+\draw (2,-1.4) node [above] {Don't Bar};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\bf Sequential Matching Pennies Game}
+\begin{center}
+\begin{tikzpicture}[scale=2,font=\normalsize]
+% Specify spacing for each level of the tree
+\tikzstyle{level 1}=[level distance=15mm,sibling distance=25mm]
+\tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
+
+\tikzset{
+% Two node styles for game trees: solid and hollow
+solid node/.style={circle,draw,inner sep=1.5,fill=black},
+hollow node/.style={circle,draw,inner sep=1.5}
+}
+
+
+% The Tree
+\node(0)[solid node,label=above:{1}]{}
+
+child{node(1)[solid node,label=right:{2}]{}
+child{node[hollow node,label=below:{(-1,\;1)}]{} edge from parent node[left]{H}}
+child{node[hollow node,label=below:{(1,\;-1)}]{} edge from parent node[right]{T}}
+edge from parent node[left,xshift=-3]{H}
+}
+child{node(2)[solid node,label=right:{2}]{}
+child{node[hollow node,label=below:{(1,\;-1)}]{} edge from parent node[left]{H}}
+child{node[hollow node,label=below:{(-1,\;1)}]{} edge from parent node[right]{T}}
+edge from parent node[right,xshift=3]{T}
+};
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{\bf Centipede Game}
+\begin{center}
+\begin{tikzpicture}[font=\small,scale=1.2]
+% Two node styles: solid and hollow
+\tikzstyle{solid node}=[circle,draw,inner sep=1.2,fill=black];
+\tikzstyle{hollow node}=[circle,draw,inner sep=1.2];
+% The Tree
+\node(0)[solid node]{}
+child[grow=down]{node[solid node]{}edge from parent node[left]{S}}
+child[grow=right]{node(1)[solid node]{}
+child[grow=down]{node[solid node]{}edge from parent node[left]{S}}
+child[grow=right]{node(2)[solid node]{}
+child[grow=down]{node[solid node]{}edge from parent node[left]{S}}
+child[grow=right]{node(3)[solid node]{}
+child[grow=down]{node[solid node]{}edge from parent node[left]{S}}
+child[grow=right]{node(4)[solid node]{}
+child[grow=down]{node[solid node]{}edge from parent node[left]{S}}
+child[grow=right]{node(5)[solid node]{}
+child[grow=down]{node[solid node]{}edge from parent node[left]{S}}
+child[grow=right]{node(6)[solid node]{}
+edge from parent node[above]{C}
+}
+edge from parent node[above]{C}
+}
+edge from parent node[above]{C}
+}
+edge from parent node[above]{C}
+}
+edge from parent node[above]{C}
+}
+edge from parent node[above]{C}
+};
+% Movers
+\foreach \x in {0,2,4}
+\node[above]at(\x){1};
+\foreach \x in {1,3,5}
+\node[above]at(\x){2};
+% payoffs
+\node[below]at(0-1){1,\;0};
+\node[below]at(1-1){0,\;2};
+\node[below]at(2-1){3,\;1};
+\node[below]at(3-1){2,\;4};
+\node[below]at(4-1){5,\;3};
+\node[below]at(5-1){4,\;6};
+\node[right]at(6){6,\;5};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\small \textsf{\bfseries Final 2015 Essay D. The Voter Coordination Game.} (...omitted...)
+Consider the game played between the remaining two voters who prefer Party $P$ and Party $M$ the most (equally!). 
+\begin{enumerate}\itemsep-0.5ex 
+\item If both vote for Party $P$, the vote shares for the five major parties would be $(D, K, N, P, M)=(46, 25, 9, 5, 3)$, resulting in party seat allocation of $(D, K, N, P, M)=(18, 10, 4, 2, 0)$. 
+\item If both vote for Party $M$, the vote shares would be $(D, K, N, P, M)=(46, 25, 9, 3, 5)$, resulting in party seat allocation of $(D, K, N, P, M)=(18, 10, 4, 0, 2)$. 
+\item If one votes for Party $P$ and the other for Party $M$, the vote shares would be $(D, K, N, P, M)=(46, 25, 9, 4, 4)$, resulting in party seat allocation of $(D, K, N, P, M)=(19, 11, 4, 0, 0)$. 
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\small
+\begin{enumerate}\itemsep-0.5ex 
+\item[1.] Suppose the two voters like Party K (but not as much as Party P and M), and hate Party D and Party N a lot. Rank the above three party seat allocation outcomes for these two voters.
+\item[2.] Draw the payoff matrix of the game. Is there a dominant strategy for each of the two voters? Why or why not?
+\item[3.] Is there any pure Nash equilibrium in this game?
+\item[4.] Suppose one of the two remaining voters can send the message ``I will vote for Party $\_\_$'' to the other voter. What do you think would happen?
+\item[5.] Suppose both voters can simultaneously send messages ``I will vote for Party $\_\_$'' to the other side. What do you think would happen?
+\item[6.] The Central Election Committee of Daiwan does not allow elections polls results to be announced in the last few days before the election. Do you think the two remaining voters would prefer this ban to be lifted? Why or why not? 
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+\small \textsf{\bfseries Final 2010 Essay C. } (...omitted...)
+Micron received full immunity because it was the first to inform the Commission. Between December 2003 and February 2006, Infineon, Hynix, Samsung, Elpida and NEC also applied for leniency under the EU's Leniency Notice. The Commission took account of their cooperation in  the investigation and granted a reduction of respectively 45\% (Infineon), 27\% (Hynix) and 18\% (Samsung, Elpida, NEC). Due to mitigating circumstances, the fine of Hynix was further reduced by 5\% for Hynix and by 10\% for Toshiba and Mitsubishi. Finally, all companies benefitted of a reduction of 10\% for settling the case with the Commission. The overall cartel was in operation between 1 July 1998 and 15 June 2002. It involved a network of contacts and sharing of secret information, mostly on a bilateral basis, through which they coordinated the price levels and quotations for DRAMs (Dynamic Random Access Memory), sold to major PC or server original equipment manufacturers (OEMs) in the EEA... (omitted)\end{frame}
+
+\begin{frame}
+\small
+\begin{enumerate}\itemsep-0.5ex 
+\item[1.] Consider the game played between various partners in the DRAM cartel: Each partner can decide to either (a) be first to inform the commission, (b) cooperate in the investigation, or (c) deny any wrong doing. Assume the outcome for each action is as described in the above article, and any ``ties'', such as two firms both choosing (a), will be resolved by equally splitting the fine reduction. Is any of the three actions a dominant strategy? Why or why not?
+\item[2.] What is the Nash equilibrium of this game? Explain.
+\item[3.] Suppose the partners agree to all play (c) and jointly deny any wrong-doing. Is this collusive outcome sustainable? Why or why not?
+\item[4.] Are your answers above consistent with Micron’s defection in the real world? Why or why not? 
+\end{enumerate}
+\end{frame}
+
+\end{document}
